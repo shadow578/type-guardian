@@ -22,3 +22,8 @@ export type TypeMatcher = (input: unknown) => boolean;
  * a record describing a object by listing each property and a expected type
  */
 export type ObjectDescription = Readonly<Record<string, TypeName | TypeMatcher>>;
+
+/**
+ * a typeguard function to check if a input is of type T
+ */
+export type TypeGuard<T> = (input: unknown) => input is T;
