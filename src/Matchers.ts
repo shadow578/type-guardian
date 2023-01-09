@@ -1,18 +1,4 @@
-/**
- * directly matchable type names.
- * equal to what typeof(x) would return, in addition of 'any'
- */
-type TypeName = 'string' | 'number' | 'bigint' | 'boolean' | 'symbol' | 'undefined' | 'object' | 'function' | 'any';
-
-/**
- * a function that checks if a unknown input matches a pre-defined type
- */
-type TypeMatcher = (input: unknown) => boolean;
-
-/**
- * a record describing a object by listing each property and a expected type
- */
-type ObjectDescription = Readonly<Record<string, TypeName | TypeMatcher>>;
+import { TypeName, TypeMatcher, ObjectDescription } from './Types';
 
 /**
  * check if a input matches a expected type.
