@@ -1,6 +1,6 @@
 # type-guardian
 
-Functional, composable type guards.
+functional, composable type guards.
 
 
 ## Installation
