@@ -1,12 +1,12 @@
 import { matchArray } from '../../Matchers';
 
 describe('matchArray', () => {
-  test('matches empty array when matchEmpty = true', () => {
-    expect(matchArray('string', true)([])).toBeTruthy();
+  test('matches empty array with accept-empty behaviour', () => {
+    expect(matchArray('string', 'accept-empty')([])).toBeTruthy();
   });
 
-  test('rejects empty array when matchEmpty = false', () => {
-    expect(matchArray('string', false)([])).toBeFalsy();
+  test('rejects empty array with reject-empty behaviour', () => {
+    expect(matchArray('string', 'reject-empty')([])).toBeFalsy();
   });
 
   test('matches pure string array', () => {

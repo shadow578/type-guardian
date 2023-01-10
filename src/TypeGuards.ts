@@ -1,68 +1,67 @@
-import { matchArray } from './Matchers';
-import { makeTypeGuard } from './TypeGuard';
+import { match, matchArray } from './Matchers';
 
 /**
  * {@link TypeGuard} for 'string' type
  */
-export const isString = makeTypeGuard<string>('string');
+export const isString = match<string>('string');
 
 /**
  * {@link TypeGuard} for 'string[]' type
  */
-export const isStringArray = makeTypeGuard<string[]>(matchArray('string'));
+export const isStringArray = matchArray<string[]>('string');
 
 /**
  * {@link TypeGuard} for 'number' type
  */
-export const isNumber = makeTypeGuard<number>('number');
+export const isNumber = match<number>('number');
 
 /**
  * {@link TypeGuard} for 'number[]' type
  */
-export const isNumberArray = makeTypeGuard<number[]>(matchArray('number'));
+export const isNumberArray = matchArray<number[]>('number');
 
 /**
  * {@link TypeGuard} for 'bigint' type
  */
-export const isBigInt = makeTypeGuard<bigint>('bigint');
+export const isBigInt = match<bigint>('bigint');
 
 /**
  * {@link TypeGuard} for 'bigint[]' type
  */
-export const isBigIntArray = makeTypeGuard<bigint[]>(matchArray('bigint'));
+export const isBigIntArray = matchArray<bigint[]>('bigint');
 
 /**
  * {@link TypeGuard} for 'boolean' type
  */
-export const isBoolean = makeTypeGuard<boolean>('boolean');
+export const isBoolean = match<boolean>('boolean');
 
 /**
  * {@link TypeGuard} for 'boolean[]' type
  */
-export const isBooleanArray = makeTypeGuard<boolean[]>(matchArray('boolean'));
+export const isBooleanArray = matchArray<boolean[]>('boolean');
 
 /**
  * {@link TypeGuard} for 'Symbol' type
  */
-export const isSymbol = makeTypeGuard<symbol>('symbol');
+export const isSymbol = match<symbol>('symbol');
 
 /**
  * {@link TypeGuard} for 'Symbol[]' type
  */
-export const isSymbolArray = makeTypeGuard<symbol[]>(matchArray('symbol'));
+export const isSymbolArray = matchArray<symbol[]>('symbol');
 
 /**
  * {@link TypeGuard} for 'any' type
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const isAny = makeTypeGuard<any>('any');
+export const isAny = match<any>('any');
 
 /**
  * {@link TypeGuard} for 'undefined' type
  */
-export const isUndefined = makeTypeGuard<undefined>('undefined');
+export const isUndefined = match<undefined>('undefined');
 
 /**
  * {@link TypeGuard} for 'void' type
  */
-export const isVoid = makeTypeGuard<void>('undefined');
+export const isVoid = match<void>('undefined');
