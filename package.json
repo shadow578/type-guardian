@@ -11,11 +11,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shadow578/object-typeguard.git"
+    "url": "git+https://github.com/shadow578/type-guardian.git"
   },
-  "homepage": "https://github.com/shadow578/object-typeguard",
+  "homepage": "https://github.com/shadow578/type-guardian",
   "bugs": {
-    "url": "https://github.com/shadow578/object-typeguard/issues"
+    "url": "https://github.com/shadow578/type-guardian/issues"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
