@@ -1,5 +1,5 @@
 {
-  "name": "type-guardian",
+  "name": "@shadow578/type-guardian",
   "version": "1.0.0",
   "description": "Quickly write Type-Guard functions for checking objects",
   "author": "shadow578",
