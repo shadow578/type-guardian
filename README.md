@@ -44,7 +44,7 @@ A nullable type accepts every value of the target type, `null` and `undefined`.
 The function takes either a `TypeName` or another `TypeGuard` and returns a new guard for that type:
 
 ```typescript
-const isNullableString = matchNullable<string|undefined|null>('string');
+const isNullableString = matchNullable<string>('string');
 
 isNullableString(''); // returns true
 isNullableString('i am a string'); // returns true
@@ -66,7 +66,7 @@ Default behaviour is to accept empty arrays (`accept-empty`).
 The function takes either a `TypeName` or another `TypeGuard` and returns a new guard for that type:
 
 ```typescript
-const isStringArray = matchArray<string[]>('string'); // equivalent to matchArray('string', 'accept-empty')
+const isStringArray = matchArray<string>('string'); // equivalent to matchArray('string', 'accept-empty')
 
 isStringArray(['a string']); // returns true
 isStringArray(['a string', 0]); // returns false
@@ -77,7 +77,7 @@ isStringArray(null); // returns false
 Or, with `emptyBehaviour` set to `reject-empty`: 
 
 ```typescript
-const isStringArray = matchArray<string[]>('string', 'reject-empty');
+const isStringArray = matchArray<string>('string', 'reject-empty');
 
 isStringArray(['a string']); // returns true
 isStringArray(['a string', 0]); // returns false

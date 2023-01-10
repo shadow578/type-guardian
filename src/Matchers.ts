@@ -57,8 +57,8 @@ export function matchUnion<T>(...validTypes: (TypeName | TypeGuard)[]): TypeGuar
  * @param type the type to match
  * @returns a matcher that matches any input with the given type or undefined/null
  */
-export function matchNullable<T>(type: TypeName | TypeGuard): TypeGuard<T> {
-  return <TypeGuard<T>>((input: unknown) => {
+export function matchNullable<T>(type: TypeName | TypeGuard): TypeGuard<T | undefined | null> {
+  return <TypeGuard<T | undefined | null>>((input: unknown) => {
     return input === undefined || input === null || matchInput(input, type);
   });
 }
@@ -73,8 +73,8 @@ export function matchNullable<T>(type: TypeName | TypeGuard): TypeGuard<T> {
 export function matchArray<T>(
   type: TypeName | TypeGuard,
   emptyBehaviour: 'accept-empty' | 'reject-empty' = 'accept-empty',
-): TypeGuard<T> {
-  return <TypeGuard<T>>((input: unknown) => {
+): TypeGuard<T[]> {
+  return <TypeGuard<T[]>>((input: unknown) => {
     // not a array
     if (input === undefined || input == null || !Array.isArray(input)) {
       return false;

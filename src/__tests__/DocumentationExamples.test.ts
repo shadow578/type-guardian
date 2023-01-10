@@ -12,7 +12,7 @@ describe('examples in README', () => {
   });
 
   test('matchNullable', () => {
-    const isNullableString = matchNullable<string | undefined | null>('string');
+    const isNullableString = matchNullable<string>('string');
 
     expect(isNullableString('')).toBeTruthy();
     expect(isNullableString('i am a string')).toBeTruthy();
@@ -22,7 +22,7 @@ describe('examples in README', () => {
   });
 
   test('matchArray, emptyBehaviour = accept-empty (default)', () => {
-    const isStringArray = matchArray<string[]>('string'); // equivalent to matchArray('string', 'accept-empty')
+    const isStringArray = matchArray<string>('string'); // equivalent to matchArray('string', 'accept-empty')
 
     expect(isStringArray(['a string'])).toBeTruthy();
     expect(isStringArray(['a string', 0])).toBeFalsy();
@@ -31,7 +31,7 @@ describe('examples in README', () => {
   });
 
   test('matchArray, emptyBehaviour = reject-empty', () => {
-    const isStringArray = matchArray<string[]>('string', 'reject-empty');
+    const isStringArray = matchArray<string>('string', 'reject-empty');
 
     expect(isStringArray(['a string'])).toBeTruthy();
     expect(isStringArray(['a string', 0])).toBeFalsy();
