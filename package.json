@@ -1,6 +1,6 @@
 {
   "name": "type-guardian",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Quickly write Type-Guard functions for checking objects",
   "author": "shadow578",
   "license": "Apache-2.0",
